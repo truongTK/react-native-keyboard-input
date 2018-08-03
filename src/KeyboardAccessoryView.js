@@ -1,4 +1,4 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import {StyleSheet, Platform, Dimensions, NativeModules, NativeEventEmitter, DeviceEventEmitter, processColor, BackHandler} from 'react-native';
 import {KeyboardTrackingView} from 'react-native-keyboard-tracking-view';
 import CustomKeyboardView from './CustomKeyboardView';
@@ -9,20 +9,20 @@ const IsAndroid = Platform.OS === 'android';
 const ScreenSize = Dimensions.get('window');
 
 export default class KeyboardAccessoryView extends Component {
-  static propTypes = {
-    renderContent: PropTypes.func,
-    onHeightChanged: React.PropTypes.func,
-    kbInputRef: React.PropTypes.object,
-    kbComponent: React.PropTypes.string,
-    kbInitialProps: React.PropTypes.object,
-    onItemSelected: React.PropTypes.func,
-    onRequestShowKeyboard: React.PropTypes.func,
-    onKeyboardResigned: React.PropTypes.func,
-    iOSScrollBehavior: React.PropTypes.number,
-    revealKeyboardInteractive: React.PropTypes.bool,
-    manageScrollView: React.PropTypes.bool,
-    requiresSameParentToManageScrollView: React.PropTypes.bool,
-  };
+  // static propTypes = {
+  //   renderContent: PropTypes.func,
+  //   onHeightChanged: React.PropTypes.func,
+  //   kbInputRef: React.PropTypes.object,
+  //   kbComponent: React.PropTypes.string,
+  //   kbInitialProps: React.PropTypes.object,
+  //   onItemSelected: React.PropTypes.func,
+  //   onRequestShowKeyboard: React.PropTypes.func,
+  //   onKeyboardResigned: React.PropTypes.func,
+  //   iOSScrollBehavior: React.PropTypes.number,
+  //   revealKeyboardInteractive: React.PropTypes.bool,
+  //   manageScrollView: React.PropTypes.bool,
+  //   requiresSameParentToManageScrollView: React.PropTypes.bool,
+  // };
   static defaultProps = {
     iOSScrollBehavior: -1,
     revealKeyboardInteractive: false,
